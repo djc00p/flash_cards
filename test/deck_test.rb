@@ -21,7 +21,7 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
     cards = [card_1, card_2, card_3]
     deck = Deck.new(cards)
-    assert_equal 3, deck.cards.count
+    assert_equal 3, deck.count
   end
 
   def test_cards_category
@@ -30,7 +30,7 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
     cards = [card_1, card_2, card_3]
     deck = Deck.new(cards)
-    assert :STEM, deck.cards
+    assert :STEM, deck.cards_in_category
   end
 
   def test_cards_category_2
@@ -39,7 +39,7 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
     cards = [card_1, card_2, card_3]
     deck = Deck.new(cards)
-    assert :Geography, deck.cards
+    assert :Geography, deck.cards_in_category
   end
 
   def test_cards_category_3
@@ -48,7 +48,7 @@ class DeckTest < Minitest::Test
     card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
     cards = [card_1, card_2, card_3]
     deck = Deck.new(cards)
-    assert "Pop Culture", deck.cards
+    assert "Pop Culture", deck.cards_in_category
   end
 
 
